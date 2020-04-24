@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>4</title>
+    </head>
+    <script src="vue.js" charset="utf-8"></script>
+    
+    <body>
+        <div id="app">
+            <button v-on="{mouseenter: ME,mouseleave: ML}" v-on:click="C">click</button>
+            <form @keyup.enter="up" v-on:submit.prevent="OS">
+                <input type="text">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            new Vue({
+                el:"#app",
+                methods:{
+                    C:function(){
+                        console.log("click");
+                    },
+                    ME:function(){
+                        console.log("enter");
+                    },
+                    ML:function(){
+                        console.log("leave");
+                    },
+                    OS:function(){
+                        //event.preventDefault();
+                        console.log("submit");
+                    },
+                    up:function(){
+                        console.log("key");
+                    }
+                }
+            })
+            </script>
+    </body>
+</html>

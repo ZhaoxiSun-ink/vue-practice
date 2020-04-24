@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>18</title>
+        <style>
+            .panel{
+                max-width: 300px;
+                border: 1px solid #999;
+                margin-bottom: 15px;
+            }
+
+            .pamel > * {
+                padding:15px;
+            }
+
+            .panel .title{
+                border-bottom: 1px solid #999;
+            }
+
+            .panel .footer{
+                border-top: 1px solid #999;
+            }
+        </style>
+    </head>
+    <script src="vue.js"></script>
+    <body>
+        <div id="app">
+            <panel>
+                <div slot="title">yo</div>
+                <div slot="content">hhhhh</div>
+                <div slot="footer">More</div>
+            </panel>
+            <panel></panel>
+        </div>
+        <template id="panel-tpl">
+            <div class="panel">
+                <div class="title">
+                    <slot name="title">JOJO</slot>
+                </div>
+                <div class="content">
+                    <slot name="content">奇妙冒险</slot>
+                </div>
+                <div class="footer">
+                    <slot name="footer">DIO</slot>
+                </div>
+            </div>
+        </template>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>

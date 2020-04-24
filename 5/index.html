@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>5</title>
+    </head>
+    <script src="vue.js" charset="utf-8"></script>
+    <body>
+        <div id="app">
+            <input type="text" v-model.number="name"><br>
+            <pre> {{name}}</pre><br>
+            {{name}}
+        </div>
+        <script type="text/javascript">
+        new Vue({
+            el:"#app",
+            data:{
+                name:'A',
+            }
+        })
+        </script>
+    </body>
+</html>

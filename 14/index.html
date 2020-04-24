@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>14</title>
+    </head>
+    <script src="vue.js"></script>
+    <body>
+        <div id="app">
+            <div>
+                <input v-model="length">mm<br>
+                {{length | meter}}
+            </div>
+            <hr>
+            <div>
+                <input v-model="price"></inpput><br>
+                {{price | currency('USD')}}
+            </div>    
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

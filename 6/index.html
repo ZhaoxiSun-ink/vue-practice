@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>6</title>
+    </head>
+    <script src="vue.js" charset="utf-8"></script>
+    <body>
+        <div id="app">
+            <label>
+                男
+                <input v-model="sex" value="male" type="radio">
+            </label>
+            <label>
+                女
+                <input v-model="sex" value="female" type="radio">
+            </label>
+            {{sex}}
+            <br>
+            <label>
+                米饭
+                <input v-model="food" value="rice" type="checkbox">
+            </label>
+            <label>
+                面条
+                <input v-model="food" value="noodle" type="checkbox">
+            </label>
+            {{food}}
+            <br>
+            <textarea v-model="text"></textarea>
+            <br>
+            <div>来自哪里？</div>
+            <select v-model="from">
+                <option vaule="1">武汉</option>
+                <option vaule="2">北京</option>
+            </select>
+            {{from}}
+            <br>
+            <div>来自哪里？</div>
+            <select v-model="d" multiple>
+                <option vaule="1">武汉</option>
+                <option vaule="2">北京</option>
+            </select>
+        </div>
+        <script type="text/javascript">
+        new Vue({
+            el:"#app",
+            data:{
+                from:"武汉",
+                d:[],
+                sex:"female",
+                food:["rice"],
+                text:"All members of the campus community should take special note that - with the exception of EMPAC, CBIS, Folsom Library, the VCC, Lally, Amos Eaton and the Greene Building - the main/core campus buildings may experience a normal power outage between 7:30am and 8:30am on Tuesday, July 9.  This is due to the substation closed-transition switching needed for 34.5KV regulator and cable repairs.  Normally such work will not cause a power outage, but the campus community is nevertheless advised that there is some risk of one occurring in the event of unexpected equipment failure.",
+            }
+        })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <script src="vue.js" charset="utf-8"></script>
+    <body>
+        <div id="app">
+            <li v-for="food in list">{{food.name}}：💴 {{food.price}}  
+                折后💴 {{food.discount ? food.price*food.discount : food.price}}</li>
+        </div>
+        <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                list:[{
+                    name:"🐟",
+                    price:8,
+                    discount:0.7
+                },{
+                    name:"🥩",
+                    price:10
+                }
+            ],
+            }
+        })
+        </script>
+    </body>
+</html>
